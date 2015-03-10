@@ -494,7 +494,7 @@ public class Game extends javax.swing.JFrame {
                         else{button16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[0][0] = 2;} 
                         height[0]++; turno = !turno; break;
                 case 1: if (turno){button15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[1][0] = 1;} 
-                        else{button15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[5%height[1]][0] = 2;} 
+                        else{button15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[1][0] = 2;} 
                         height[0]++; turno = !turno; break;
                 case 2: if (turno){button14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[2][0] = 1;} 
                         else{button14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[2][0] = 2;} 
