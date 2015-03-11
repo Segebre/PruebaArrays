@@ -45,7 +45,20 @@ public class Game extends javax.swing.JFrame {
                 this.dispose();
             }               
         }
-    }
+        }
+       
+       for(int x = 0; x < 6; x++){
+           for(int y = 0; y < 4; y++){
+            if(board[x][y] == 1 && board[x][y+1] == 1 && board[x][y+2] == 1 && board[x][y+3] == 1){
+                for(int z = 0; z < 10; z++){
+                    if(players[z].equalsIgnoreCase(player1)){
+                        score[z] += 3;
+                    }
+                }
+                this.dispose();
+            }               
+        }
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
