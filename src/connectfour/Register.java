@@ -120,15 +120,15 @@ public class Register extends javax.swing.JFrame {
         boolean yis = true;
         
         for(int x = 0; x < 10; x++){
-            if(ConnectFour.players[x].equalsIgnoreCase(UsernameButton.getText())){
+            if(ConnectFour.user[x][0].equalsIgnoreCase(UsernameButton.getText())){
                 yis = false;
             }
         }
         
         if(yis){
-        ConnectFour.players[ConnectFour.num] =  UsernameButton.getText();
-        ConnectFour.passwords[ConnectFour.num] = password;
-        ConnectFour.names[ConnectFour.num] = NameButton.getText();
+        ConnectFour.user[ConnectFour.num][0] =  UsernameButton.getText();
+        ConnectFour.user[ConnectFour.num][1] = password;
+        ConnectFour.user[ConnectFour.num][2] = NameButton.getText();
         ConnectFour.num++;
         ConnectFour.player1 = UsernameButton.getText();
         this.dispose();

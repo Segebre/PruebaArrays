@@ -38,11 +38,19 @@ public class Game extends javax.swing.JFrame {
            for(int y = 0; y < 7; y++){
             if(board[x][y] == 1 && board[x+1][y] == 1 && board[x+2][y] == 1 && board[x+3][y] == 1){
                 for(int z = 0; z < 10; z++){
-                    if(players[z].equalsIgnoreCase(player1)){
+                    if(user[z][0].equalsIgnoreCase(player1)){
                         score[z] += 3;
+                        this.dispose();
                     }
                 }
-                this.dispose();
+            }
+            else if(board[x][y] == 2 && board[x+1][y] == 2 && board[x+2][y] == 2 && board[x+3][y] == 2){
+                for(int z = 0; z < 10; z++){
+                    if(user[z][0].equalsIgnoreCase(player2)){
+                        score[z] += 3;
+                        this.dispose();
+                    }
+                }   
             }               
         }
         }
@@ -51,39 +59,67 @@ public class Game extends javax.swing.JFrame {
            for(int y = 0; y < 4; y++){
             if(board[x][y] == 1 && board[x][y+1] == 1 && board[x][y+2] == 1 && board[x][y+3] == 1){
                 for(int z = 0; z < 10; z++){
-                    if(players[z].equalsIgnoreCase(player1)){
+                    if(user[z][0].equalsIgnoreCase(player1)){
                         score[z] += 3;
+                        this.dispose();
                     }
                 }
-                this.dispose();
-            }               
-        }
-        }
+                }
+            else if(board[x][y] == 2 && board[x][y+1] == 2 && board[x][y+2] == 2 && board[x][y+3] == 2){
+                for(int z = 0; z < 10; z++){
+                    if(user[z][0].equalsIgnoreCase(player2)){
+                        score[z] += 3;
+                        this.dispose();
+                    }
+                }    
+            }
+            }
+       }
        
         for(int x = 0; x < 3; x++){
            for(int y = 3; y < 7; y++){
                 if(board[x][y] == 1 && board[x+1][y-1] == 1 && board[x+2][y-2] == 1 && board[x+3][y-3] == 1){
                     for(int z = 0; z < 10; z++){
-                    if(players[z].equalsIgnoreCase(player1)){
+                    if(user[z][0].equalsIgnoreCase(player1)){
                         score[z] += 3;
+                        this.dispose();
                     }
                     }
-                    this.dispose();
+                    
                 }
-                }                  
+                else if(board[x][y] == 2 && board[x+1][y-1] == 2 && board[x+2][y-2] == 2 && board[x+3][y-3] == 2){
+                    for(int z = 0; z < 10; z++){
+                    if(user[z][0].equalsIgnoreCase(player2)){
+                        score[z] += 3;
+                        this.dispose();
+                    }
+                    }
+                    
+                }
+            }                  
             }
         
         for(int x = 3; x < 6; x++){
            for(int y = 3; y < 7; y++){
                 if(board[x][y] == 1 && board[x-1][y-1] == 1 && board[x-2][y-2] == 1 && board[x-3][y-3] == 1){
                     for(int z = 0; z < 10; z++){
-                    if(players[z].equalsIgnoreCase(player1)){
+                    if(user[z][0].equalsIgnoreCase(player1)){
                         score[z] += 3;
+                        this.dispose();
                     }
                     }
-                    this.dispose();
+                    
                 }
-                }                  
+                else if(board[x][y] == 2&& board[x-1][y-1] == 2 && board[x-2][y-2] == 2 && board[x-3][y-3] == 2){
+                    for(int z = 0; z < 10; z++){
+                    if(user[z][0].equalsIgnoreCase(player2)){
+                        score[z] += 3;
+                        this.dispose();
+                    }
+                    }
+                    
+                }
+            }                  
             }
     }
     /**

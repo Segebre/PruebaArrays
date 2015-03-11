@@ -104,10 +104,10 @@ public class EditarUsuario extends javax.swing.JFrame {
     private void ChangeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChangeButtonMouseClicked
        String password = new String(PasswordField.getPassword());
        for(int x = 0; x < 10; x++){
-           if(ConnectFour.player1.equalsIgnoreCase(ConnectFour.players[x])){
-               ConnectFour.players[x] = NewUserField.getText();
-               ConnectFour.passwords[x] = password;
-               ConnectFour.names[x] = NewNameField.getText();
+           if(ConnectFour.player1.equalsIgnoreCase(ConnectFour.user[x][0])){
+               ConnectFour.user[x][0] = NewUserField.getText();
+               ConnectFour.user[x][1] = password;
+               ConnectFour.user[x][2] = NewNameField.getText();
            }
        }
        ConnectFour.player1 = NewUserField.getText();

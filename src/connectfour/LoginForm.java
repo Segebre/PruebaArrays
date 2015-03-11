@@ -86,8 +86,8 @@ public class LoginForm extends javax.swing.JFrame {
     private void LogInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInButtonMouseClicked
         String password  = new String(PasswordField.getPassword());
         for(int x = 0; x < 10; x++){
-            if(UserField.getText().equalsIgnoreCase(ConnectFour.players[x])){
-                if(password.equals(ConnectFour.passwords[x])){
+            if(UserField.getText().equalsIgnoreCase(ConnectFour.user[x][0])){
+                if(password.equals(ConnectFour.user[x][1])){
                 ConnectFour.player1 = UserField.getText();
                 this.dispose();
                 new MainMenu().setVisible(true);

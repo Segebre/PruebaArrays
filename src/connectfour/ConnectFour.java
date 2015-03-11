@@ -6,10 +6,8 @@
 package connectfour;
 
 public class ConnectFour {
-  
-    public static String[] players = new String[10];
-    public static String[] passwords = new String[10];
-    public static String[] names = new String[10];
+
+    public static String[][] user = new String[10][3];
     public static int[] score = new int[10];
     public static String player1;
     public static String player2;
@@ -17,13 +15,9 @@ public class ConnectFour {
     
     public static void main(String[] args) {
       for(int x = 0; x < 10; x++){
-          players[x] = " ";
+          for(int y = 0; y < 3; y++){
+          user[x][y] = " ";
       }
-      for(int x = 0; x < 10; x++){
-          passwords[x] = " ";
-      }
-      for(int x = 0; x < 10; x++){
-          names[x] = " ";
       }
       for(int x = 0; x < 10; x++){
           score[x] = 0;

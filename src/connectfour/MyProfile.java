@@ -106,10 +106,10 @@ public class MyProfile extends javax.swing.JFrame {
             
     private void jToggleButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jToggleButton2MouseClicked
         for(int x = 0; x < 10; x++){
-            if(ConnectFour.player1.equalsIgnoreCase(ConnectFour.players[x])){
-                ConnectFour.players[x] = " ";
-                ConnectFour.names[x] = " ";
-                ConnectFour.passwords[x] = " ";
+            if(ConnectFour.player1.equalsIgnoreCase(ConnectFour.user[x][0])){
+                ConnectFour.user[x][0] = " ";
+                ConnectFour.user[x][1] = " ";
+                ConnectFour.user[x][2] = " ";
                 ConnectFour.score[x] = 0;
                 ConnectFour.player1 = " ";
             }
