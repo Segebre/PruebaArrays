@@ -9,8 +9,7 @@ public class ConnectFour {
 
     public static String[][] user = new String[10][3];
     public static int[] score = new int[10];
-    public static String player1;
-    public static String player2;
+    public static String player1, player2;
     public static int num = 0;
     
     public static void main(String[] args) {

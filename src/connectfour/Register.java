@@ -5,6 +5,8 @@
  */
 package connectfour;
 
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -119,6 +121,19 @@ public class Register extends javax.swing.JFrame {
         
         boolean yis = true;
         
+        if(UsernameButton.getText().equalsIgnoreCase(" ") || UsernameButton.getText().equalsIgnoreCase("") ){
+            JOptionPane.showMessageDialog(null,"Elija un usuario!","Error",JOptionPane.WARNING_MESSAGE);
+            UsernameButton.requestFocus();
+        }
+        else if(NameButton.getText().equalsIgnoreCase(" ") || NameButton.getText().isEmpty() ){
+            JOptionPane.showMessageDialog(null,"Elija un nombre!","Error",JOptionPane.WARNING_MESSAGE);
+            NameButton.requestFocus();
+        }
+        else if(password.isEmpty() || password.equals(" ")){
+            JOptionPane.showMessageDialog(null,"Elija una contraseña!","Error",JOptionPane.WARNING_MESSAGE);
+            PasswordButton.requestFocus();
+        }
+        
         for(int x = 0; x < 10; x++){
             if(ConnectFour.user[x][0].equalsIgnoreCase(UsernameButton.getText())){
                 yis = false;
@@ -135,7 +150,9 @@ public class Register extends javax.swing.JFrame {
         new MainMenu().setVisible(true);
         }
         else{
-            System.out.println("La cagas");
+            JOptionPane.showMessageDialog(null,"Usuario ya esta registrado, elija otro nombre.","Error",JOptionPane.WARNING_MESSAGE);
+            UsernameButton.setText(" ");
+            UsernameButton.requestFocus();
         }
     }//GEN-LAST:event_RegisterButtonMouseClicked
 

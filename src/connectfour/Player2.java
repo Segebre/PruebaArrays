@@ -5,7 +5,7 @@
  */
 package connectfour;
 
-
+import static connectfour.ConnectFour.*;
 
 
 /**
@@ -21,6 +21,7 @@ public class Player2 extends javax.swing.JFrame {
         initComponents();
     }
 
+    boolean yes = false;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -95,9 +96,21 @@ public class Player2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
-        ConnectFour.player2 = usernamefield.getText();
-        this.dispose();   
-        new Game().setVisible(true);
+        for(int x = 0; x < 10; x++){
+            if(usernamefield.getText().equalsIgnoreCase(user[x][0])){
+              yes = true;
+              break;
+            }
+        }
+        if(yes){
+            player2 = usernamefield.getText();
+            this.dispose();   
+            new Game().setVisible(true);
+        }
+        else{
+            System.out.println("No existe, intentelo denuevo");
+        }
+        
     }//GEN-LAST:event_LoginButtonMouseClicked
 
     private void ReturnButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonMouseClicked

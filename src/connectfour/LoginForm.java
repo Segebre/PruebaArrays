@@ -5,6 +5,8 @@
  */
 package connectfour;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Kamil I
@@ -17,7 +19,7 @@ public class LoginForm extends javax.swing.JFrame {
     public LoginForm() {
         initComponents();
     }
-
+    boolean yes = false, ok = false;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,6 +35,7 @@ public class LoginForm extends javax.swing.JFrame {
         ReturnButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         LogInButton.setText("Log In");
         LogInButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -85,6 +88,21 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void LogInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInButtonMouseClicked
         String password  = new String(PasswordField.getPassword());
+        if(UserField.getText().equals(" ") || UserField.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null,"Ingrese un usuario!","Error",JOptionPane.WARNING_MESSAGE);
+            UserField.requestFocus();
+            ok = false;
+        }
+        else if(password.equals(" ") || password.isEmpty()){
+            JOptionPane.showMessageDialog(null,"Ingrese una contraseña!","Error",JOptionPane.WARNING_MESSAGE);
+            PasswordField.requestFocus();
+            ok = false;
+        }
+        else{
+            ok = true;
+        }
+        
+        if(ok){
         for(int x = 0; x < 10; x++){
             if(UserField.getText().equalsIgnoreCase(ConnectFour.user[x][0])){
                 if(password.equals(ConnectFour.user[x][1])){
@@ -92,11 +110,21 @@ public class LoginForm extends javax.swing.JFrame {
                 this.dispose();
                 new MainMenu().setVisible(true);
                 }
-                else{
-                    System.out.println("Wrong Password");
-                    break;
+            else{
+                JOptionPane.showMessageDialog(null,"Contraseña incorrecta!","Error",JOptionPane.WARNING_MESSAGE);
+                PasswordField.setText(null);
+                PasswordField.requestFocus();
+                yes = false;
+                break;
                 }
             }
+        yes = true;
+        }
+        if(yes){
+        JOptionPane.showMessageDialog(null,"El usuario no existe!","Error",JOptionPane.WARNING_MESSAGE);
+        UserField.setText("");
+        UserField.requestFocus();
+        }
         }
     }//GEN-LAST:event_LogInButtonMouseClicked
 
