@@ -109,7 +109,8 @@ public class MyProfile extends javax.swing.JFrame {
                 ConnectFour.user[x][0] = " ";
                 ConnectFour.user[x][1] = " ";
                 ConnectFour.user[x][2] = " ";
-                ConnectFour.score[x] = 0;
+                ConnectFour.score[x][1] = 0;
+                ConnectFour.score[x][2] = 0;
                 ConnectFour.player1 = " ";
             }
         }

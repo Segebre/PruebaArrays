@@ -39,7 +39,7 @@ public class Game extends javax.swing.JFrame {
             if(board[x][y] == 1 && board[x+1][y] == 1 && board[x+2][y] == 1 && board[x+3][y] == 1){
                 for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player1)){
-                        score[z] += 3;
+                        score[z][1] += 3;
                         this.dispose();
                     }
                 }
@@ -47,7 +47,7 @@ public class Game extends javax.swing.JFrame {
             else if(board[x][y] == 2 && board[x+1][y] == 2 && board[x+2][y] == 2 && board[x+3][y] == 2){
                 for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player2)){
-                        score[z] += 3;
+                        score[z][1] += 3;
                         this.dispose();
                     }
                 }   
@@ -60,7 +60,7 @@ public class Game extends javax.swing.JFrame {
             if(board[x][y] == 1 && board[x][y+1] == 1 && board[x][y+2] == 1 && board[x][y+3] == 1){
                 for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player1)){
-                        score[z] += 3;
+                        score[z][1] += 3;
                         this.dispose();
                     }
                 }
@@ -68,7 +68,7 @@ public class Game extends javax.swing.JFrame {
             else if(board[x][y] == 2 && board[x][y+1] == 2 && board[x][y+2] == 2 && board[x][y+3] == 2){
                 for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player2)){
-                        score[z] += 3;
+                        score[z][1] += 3;
                         this.dispose();
                     }
                 }    
@@ -81,7 +81,7 @@ public class Game extends javax.swing.JFrame {
                 if(board[x][y] == 1 && board[x+1][y-1] == 1 && board[x+2][y-2] == 1 && board[x+3][y-3] == 1){
                     for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player1)){
-                        score[z] += 3;
+                        score[z][1] += 3;
                         this.dispose();
                     }
                     }
@@ -90,7 +90,7 @@ public class Game extends javax.swing.JFrame {
                 else if(board[x][y] == 2 && board[x+1][y-1] == 2 && board[x+2][y-2] == 2 && board[x+3][y-3] == 2){
                     for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player2)){
-                        score[z] += 3;
+                        score[z][1] += 3;
                         this.dispose();
                     }
                     }
@@ -104,7 +104,7 @@ public class Game extends javax.swing.JFrame {
                 if(board[x][y] == 1 && board[x-1][y-1] == 1 && board[x-2][y-2] == 1 && board[x-3][y-3] == 1){
                     for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player1)){
-                        score[z] += 3;
+                        score[z][1] += 3;
                         this.dispose();
                     }
                     }
@@ -113,7 +113,7 @@ public class Game extends javax.swing.JFrame {
                 else if(board[x][y] == 2&& board[x-1][y-1] == 2 && board[x-2][y-2] == 2 && board[x-3][y-3] == 2){
                     for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player2)){
-                        score[z] += 3;
+                        score[z][1] += 3;
                         this.dispose();
                     }
                     }

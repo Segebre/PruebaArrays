@@ -8,7 +8,7 @@ package connectfour;
 public class ConnectFour {
 
     public static String[][] user = new String[10][3];
-    public static int[] score = new int[10];
+    public static int[][] score = new int[10][2];
     public static String player1, player2;
     public static int num = 0;
     
@@ -19,7 +19,9 @@ public class ConnectFour {
       }
       }
       for(int x = 0; x < 10; x++){
-          score[x] = 0;
+          for(int y=0; y<2; y++){
+            score[x][y] = 0;
+          }
       }
       new StartScreen().setVisible(true);
     }
