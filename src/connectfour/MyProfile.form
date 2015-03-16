@@ -25,11 +25,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="Return" pref="144" max="32767" attributes="0"/>
-                  <Component id="EliminarCuenta" max="32767" attributes="0"/>
-                  <Component id="Historial" pref="144" max="32767" attributes="0"/>
-                  <Component id="Edit" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="EliminarCuenta" min="-2" pref="144" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="HistorialButton" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="Return" alignment="0" pref="144" max="32767" attributes="0"/>
+                      <Component id="Edit" alignment="0" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="202" max="32767" attributes="0"/>
           </Group>
@@ -40,9 +42,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
               <Component id="Edit" min="-2" pref="49" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Component id="Historial" min="-2" pref="51" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Component id="HistorialButton" min="-2" pref="51" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Component id="EliminarCuenta" min="-2" pref="49" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="Return" min="-2" pref="44" max="-2" attributes="0"/>
@@ -60,28 +62,28 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="EditMouseClicked"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="Historial">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ver Mis Ultimos Juegos"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="HistorialMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="EliminarCuenta">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Eliminar Cuenta"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="EliminarCuentaMouseClicked"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="Return">
       <Properties>
         <Property name="text" type="java.lang.String" value="Regresar"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ReturnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="HistorialButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ver Mis Ultimos Juegos"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="HistorialButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="EliminarCuenta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eliminar Cuenta"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EliminarCuentaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

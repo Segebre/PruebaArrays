@@ -28,9 +28,9 @@ public class MyProfile extends javax.swing.JFrame {
     private void initComponents() {
 
         Edit = new javax.swing.JButton();
-        Historial = new javax.swing.JToggleButton();
-        EliminarCuenta = new javax.swing.JToggleButton();
         Return = new javax.swing.JButton();
+        HistorialButton = new javax.swing.JButton();
+        EliminarCuenta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -41,24 +41,24 @@ public class MyProfile extends javax.swing.JFrame {
             }
         });
 
-        Historial.setText("Ver Mis Ultimos Juegos");
-        Historial.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                HistorialMouseClicked(evt);
-            }
-        });
-
-        EliminarCuenta.setText("Eliminar Cuenta");
-        EliminarCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EliminarCuentaMouseClicked(evt);
-            }
-        });
-
         Return.setText("Regresar");
         Return.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ReturnMouseClicked(evt);
+            }
+        });
+
+        HistorialButton.setText("Ver Mis Ultimos Juegos");
+        HistorialButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HistorialButtonActionPerformed(evt);
+            }
+        });
+
+        EliminarCuenta.setText("Eliminar Cuenta");
+        EliminarCuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarCuentaActionPerformed(evt);
             }
         });
 
@@ -68,11 +68,12 @@ public class MyProfile extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(168, 168, 168)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Return, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                    .addComponent(EliminarCuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Historial, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                    .addComponent(Edit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(EliminarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(HistorialButton, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Return, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                        .addComponent(Edit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(202, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -80,9 +81,9 @@ public class MyProfile extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(Edit, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(Historial, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(37, 37, 37)
+                .addComponent(HistorialButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(EliminarCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Return, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -93,17 +94,20 @@ public class MyProfile extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditMouseClicked
-        this.dispose();
         new EditarUsuario().setVisible(true);
     }//GEN-LAST:event_EditMouseClicked
 
-    private void HistorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HistorialMouseClicked
-        this.dispose();
-        new Historial().setVisible(true);
-    }//GEN-LAST:event_HistorialMouseClicked
-
             
-    private void EliminarCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarCuentaMouseClicked
+    private void ReturnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnMouseClicked
+        this.dispose();
+        new MainMenu().setVisible(true);     
+    }//GEN-LAST:event_ReturnMouseClicked
+
+    private void HistorialButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HistorialButtonActionPerformed
+        new Historial().setVisible(true);
+    }//GEN-LAST:event_HistorialButtonActionPerformed
+
+    private void EliminarCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarCuentaActionPerformed
         for(int x = 0; x < 10; x++){
             if(ConnectFour.player1.equalsIgnoreCase(ConnectFour.user[x][0])){
                 ConnectFour.user[x][0] = " ";
@@ -115,12 +119,7 @@ public class MyProfile extends javax.swing.JFrame {
         }
         this.dispose();
         new StartScreen().setVisible(true);
-    }//GEN-LAST:event_EliminarCuentaMouseClicked
-
-    private void ReturnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnMouseClicked
-        this.dispose();
-        new MainMenu().setVisible(true);     
-    }//GEN-LAST:event_ReturnMouseClicked
+    }//GEN-LAST:event_EliminarCuentaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,8 +158,8 @@ public class MyProfile extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Edit;
-    private javax.swing.JToggleButton EliminarCuenta;
-    private javax.swing.JToggleButton Historial;
+    private javax.swing.JButton EliminarCuenta;
+    private javax.swing.JButton HistorialButton;
     private javax.swing.JButton Return;
     // End of variables declaration//GEN-END:variables
 }

@@ -56,7 +56,7 @@
         <Component class="javax.swing.JList" name="jList1">
           <Properties>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.AbstractListModel() {&#xa;    String[] strings = { &quot;1. Kamil le gano a Jonathan&quot;, &quot;2. Jonathan le gano a Kamil&quot;, &quot;3. Quique le gano a Jonathan&quot;, &quot;4. Jonathan le gano a Quique&quot;,&quot;5. Jonathan le gano a Quique&quot;,&quot;6. Jonathan le gano a Quique&quot;,&quot;7. Jonathan le gano a Quique&quot;,&quot;8. Jonathan le gano a Quique&quot;,&quot;9. Jonathan le gano a Quique&quot;,&quot;10. Jonathan le gano a Quique&quot;};&#xa;    public int getSize() { return strings.length; }&#xa;    public Object getElementAt(int i) { return strings[i]; }&#xa;}" type="code"/>
+              <Connection code="new javax.swing.AbstractListModel() {&#xa;    String[] strings = {history[0], history[1], history[2], history[3], history[4], history[5], history[6], history[7], history[8], history[9]};&#xa;    public int getSize() { return strings.length; }&#xa;    public Object getElementAt(int i) { return strings[i]; }&#xa;}" type="code"/>
             </Property>
           </Properties>
         </Component>

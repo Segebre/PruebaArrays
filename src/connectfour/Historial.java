@@ -14,7 +14,11 @@ public class Historial extends javax.swing.JFrame {
     public Historial() {
         initComponents();
     }
+    
 
+    public static String history[] = new String[10];
+    public static int count = 0;
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,7 +35,7 @@ public class Historial extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "1. Kamil le gano a Jonathan", "2. Jonathan le gano a Kamil", "3. Quique le gano a Jonathan", "4. Jonathan le gano a Quique","5. Jonathan le gano a Quique","6. Jonathan le gano a Quique","7. Jonathan le gano a Quique","8. Jonathan le gano a Quique","9. Jonathan le gano a Quique","10. Jonathan le gano a Quique"};
+            String[] strings = {history[0], history[1], history[2], history[3], history[4], history[5], history[6], history[7], history[8], history[9]};
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -70,7 +74,6 @@ public class Historial extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         this.dispose();
-        new MyProfile().setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**

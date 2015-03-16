@@ -24,7 +24,23 @@ public class Game extends javax.swing.JFrame {
     public Game() {
         initComponents();
     }
+    
+    //TODO: Funcion que gane el segundo jugador.
    
+    private void history(boolean x){
+        int y = Historial.count;
+        int z = y+1;
+        Historial.history[z] = Historial.history[y];
+        
+        if(x){
+            Historial.history[y] = "- " + player1 + " le haga ganado a " + player2 + ".";
+        }
+        else{
+            Historial.history[y] = "- " + player2 + " le haga ganado a " + player1 + ".";
+        }
+            Historial.count++;
+    }
+    
     private void check(){
         if(turno){
             Arrow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/LeftArrow_1.png")));
@@ -41,6 +57,7 @@ public class Game extends javax.swing.JFrame {
                 for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player1)){
                         score[z] += 3;
+                        history(true);
                         this.dispose();
                     }
                 }
@@ -49,6 +66,7 @@ public class Game extends javax.swing.JFrame {
                 for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player2)){
                         score[z] += 3;
+                        history(false);
                         this.dispose();
                     }
                 }   
@@ -62,6 +80,7 @@ public class Game extends javax.swing.JFrame {
                 for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player1)){
                         score[z] += 3;
+                        history(true);
                         this.dispose();
                     }
                 }
@@ -70,6 +89,7 @@ public class Game extends javax.swing.JFrame {
                 for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player2)){
                         score[z] += 3;
+                        history(false);
                         this.dispose();
                     }
                 }    
@@ -83,6 +103,7 @@ public class Game extends javax.swing.JFrame {
                     for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player1)){
                         score[z] += 3;
+                        history(true);
                         this.dispose();
                     }
                     }
@@ -92,6 +113,7 @@ public class Game extends javax.swing.JFrame {
                     for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player2)){
                         score[z] += 3;
+                        history(false);
                         this.dispose();
                     }
                     }
@@ -106,6 +128,7 @@ public class Game extends javax.swing.JFrame {
                     for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player1)){
                         score[z] += 3;
+                        history(true);
                         this.dispose();
                     }
                     }
@@ -115,6 +138,7 @@ public class Game extends javax.swing.JFrame {
                     for(int z = 0; z < 10; z++){
                     if(user[z][0].equalsIgnoreCase(player2)){
                         score[z] += 3;
+                        history(false);
                         this.dispose();
                     }
                     }

@@ -113,12 +113,10 @@ public class EditarUsuario extends javax.swing.JFrame {
        ConnectFour.player1 = NewUserField.getText();
        MainMenu.Usuario1Label.setText(ConnectFour.player1);
        this.dispose();
-       new MainMenu().setVisible(true);
     }//GEN-LAST:event_ChangeButtonMouseClicked
 
     private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButtonMouseClicked
     this.dispose();
-    new MyProfile().setVisible(true);
     }//GEN-LAST:event_ExitButtonMouseClicked
 
     
