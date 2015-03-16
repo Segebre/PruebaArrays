@@ -6,6 +6,7 @@
 package connectfour;
 
 import static connectfour.ConnectFour.*;
+import javax.swing.JLabel;
 
 
 /**
@@ -572,163 +573,95 @@ public class Game extends javax.swing.JFrame {
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
        if(evt.getX() < 95){
             switch(height[0]){
-                case 0: if (turno){button16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[0][0] = 1;} 
-                        else{button16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[0][0] = 2;} 
-                        height[0]++; turno = !turno; break;
-                case 1: if (turno){button15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[1][0] = 1;} 
-                        else{button15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[1][0] = 2;} 
-                        height[0]++; turno = !turno; break;
-                case 2: if (turno){button14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[2][0] = 1;} 
-                        else{button14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[2][0] = 2;} 
-                        height[0]++; turno = !turno; break;
-                case 3: if (turno){button13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[3][0] = 1;} 
-                        else{button13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[3][0] = 2;} 
-                        height[0]++; turno = !turno; break;
-                case 4: if (turno){button12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png")));  board[4][0] = 1;} 
-                        else{button12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[4][0] = 2;} 
-                        height[0]++; turno = !turno; break;
-                case 5: if (turno){button11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[5][0] = 1;} 
-                        else{button11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[5][0] = 2;} 
-                        height[0]++; turno = !turno; break;
+                case 0: yay(button16, 0);  break;
+                case 1: yay(button15, 0);  break;
+                case 2: yay(button14, 0);  break;
+                case 3: yay(button13, 0);  break;
+                case 4: yay(button12, 0);  break;
+                case 5: yay(button11, 0);  break;
             }   
         }
         else if(evt.getX() < 185){
             switch(height[1]){
-                case 0: if (turno){button26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[0][1] = 1;} 
-                        else{button26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[1]][1] = 2;} 
-                        height[1]++; turno = !turno; break;
-               case 1: if (turno){button25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png")));board[height[1]][1] = 1;} 
-                       else{button25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png")));board[height[1]][1] = 2;} 
-                       height[1]++; turno = !turno; break;
-               case 2: if (turno){button24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png")));board[height[1]][1] = 1;} 
-                        else{button24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png")));board[height[1]][1] = 2;} 
-                        height[1]++; turno = !turno; break;
-               case 3: if (turno){button23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png")));board[height[1]][1] = 1;} 
-                        else{button23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png")));board[height[1]][1] = 2;} 
-                        height[1]++; turno = !turno; break;
-               case 4: if (turno){button22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png")));board[height[1]][1] = 1;} 
-                        else{button22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png")));board[height[1]][1] = 2;} 
-                        height[1]++; turno = !turno; break;
-               case 5: if (turno){button21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png")));board[height[1]][1] = 1;} 
-                        else{button21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png")));board[height[1]][1] = 2;} 
-                        height[1]++; turno = !turno; break;
+               case 0: yay(button26, 1); break;
+               case 1: yay(button25, 1); break;
+               case 2: yay(button24, 1); break;
+               case 3: yay(button23, 1); break;
+               case 4: yay(button22, 1); break;
+               case 5: yay(button21, 1); break;
             }   
         }
         
         else if(evt.getX() < 275){
             switch(height[2]){
-                case 0: if (turno){button36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png")));board[height[2]][2] = 1;} 
-                        else{button36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[2]][2] = 2;} 
-                        height[2]++; turno = !turno; break;
-                case 1: if (turno){button35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[2]][2] = 1;} 
-                        else{button35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[2]][2] = 2;} 
-                        height[2]++; turno = !turno; break;
-                case 2: if (turno){button34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[2]][2] = 1;} 
-                        else{button34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[2]][2] = 2;} 
-                        height[2]++; turno = !turno; break;
-                case 3: if (turno){button33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[2]][2] = 1;} 
-                        else{button33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[2]][2] = 2;} 
-                        height[2]++; turno = !turno; break;
-                case 4: if (turno){button32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[2]][2] = 1;} 
-                        else{button32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[2]][2] = 2;} 
-                        height[2]++; turno = !turno; break;
-                case 5: if (turno){button31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[2]][2] = 1;} 
-                        else{button31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[2]][2] = 2;} 
-                        height[2]++; turno = !turno; break;
+                case 0: yay(button36, 2); break;
+                case 1: yay(button35, 2); break;
+                case 2: yay(button34, 2); break;
+                case 3: yay(button33, 2); break;
+                case 4: yay(button32, 2); break;
+                case 5: yay(button31, 2); break;
             }   
         }
          else if(evt.getX() < 365){
             switch(height[3]){
-                case 0: if (turno){button46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[3]][3] = 1;} 
-                        else{button46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[3]][3] = 2;} 
-                        height[3]++; turno = !turno; break;
-                case 1: if (turno){button45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[3]][3] = 1;} 
-                        else{button45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[3]][3] = 2;} 
-                        height[3]++;  turno = !turno; break;
-                case 2: if (turno){button44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[3]][3] = 1;} 
-                        else{button44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[3]][3] = 2;} 
-                        height[3]++; turno = !turno; break;
-                case 3: if (turno){button43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[3]][3] = 1;} 
-                        else{button43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[3]][3] = 2;} 
-                        height[3]++; turno = !turno; break;
-                case 4: if (turno){button42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[3]][3] = 1;} 
-                        else{button42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[3]][3] = 2;} 
-                        height[3]++; turno = !turno; break;
-                case 5: if (turno){button41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[3]][3] = 1;} 
-                        else{button41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[3]][3] = 2;} 
-                        height[3]++; turno = !turno; break;
+                case 0: yay(button46, 3); break;
+                case 1: yay(button45, 3); break;
+                case 2: yay(button44, 3); break;
+                case 3: yay(button43, 3); break;
+                case 4: yay(button42, 3); break;
+                case 5: yay(button41, 3); break;
             }   
         }
          else if(evt.getX() < 455){
             switch(height[4]){
-                case 0: if (turno){button56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[4]][4] = 1;} 
-                        else{button56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[4]][4] = 2;} 
-                        height[4]++; turno = !turno; break;
-               case 1: if (turno){button55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[4]][4] = 1;} 
-                       else{button55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[4]][4] = 2;} 
-                       height[4]++;  turno = !turno; break;
-               case 2: if (turno){button54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[4]][4] = 1;} 
-                        else{button54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[4]][4] = 2;} 
-                        height[4]++; turno = !turno; break;
-                case 3: if (turno){button53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[4]][4] = 1;} 
-                        else{button53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[4]][4] = 2;} 
-                        height[4]++; turno = !turno; break;
-                case 4: if (turno){button52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[4]][4] = 1;} 
-                        else{button52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[4]][4] = 2;} 
-                        height[4]++; turno = !turno; break;
-                case 5: if (turno){button51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[4]][4] = 1;} 
-                        else{button51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[4]][4] = 2;} 
-                        height[4]++; turno = !turno; break;
+                case 0: yay(button56, 4); break;
+                case 1: yay(button55, 4); break;
+                case 2: yay(button54, 4); break;
+                case 3: yay(button53, 4); break;
+                case 4: yay(button52, 4); break;
+                case 5: yay(button51, 4); break;
             }   
         }
          else if(evt.getX() < 546){
             switch(height[5]){
-                case 0: if (turno){button66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[5]][5] = 1;} 
-                        else{button66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[5]][5] = 2;} 
-                        height[5]++; turno = !turno; break;
-               case 1: if (turno){button65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[5]][5] = 1;} 
-                       else{button65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[5]][5] = 2;} 
-                       height[5]++; turno = !turno; break;
-               case 2: if (turno){button64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[5]][5] = 1;} 
-                        else{button64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[5]][5] = 2;} 
-                        height[5]++; turno = !turno; break;
-                case 3: if (turno){button63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[5]][5] = 1;} 
-                        else{button63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[5]][5] = 2;} 
-                        height[5]++; turno = !turno; break;
-                case 4: if (turno){button62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[5]][5] = 1;} 
-                        else{button62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[5]][5] = 2;} 
-                        height[5]++; turno = !turno; break;
-                case 5: if (turno){button61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[5]][5] = 1;} 
-                        else{button61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[5]][5] = 2;} 
-                        height[5]++; turno = !turno; break;
+                case 0: yay(button66, 5); break;
+                case 1: yay(button65, 5); break;
+                case 2: yay(button64, 5); break;
+                case 3: yay(button63, 5); break;
+                case 4: yay(button62, 5); break;
+                case 5: yay(button61, 5); break;
             }   
         }
          else if(evt.getX() < 640){
             switch(height[6]){
-                case 0: if (turno){button76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[6]][6] = 1;} 
-                        else{button76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[6]][6] = 2;} 
-                        height[6]++; turno = !turno; break;
-               case 1: if (turno){button75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[6]][6] = 1;} 
-                       else{button75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[6]][6] = 2;} 
-                       height[6]++; turno = !turno; break;
-               case 2: if (turno){button74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[6]][6] = 1;} 
-                        else{button74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[6]][6] = 2;} 
-                        height[6]++; turno = !turno; break;
-               case 3: if (turno){button73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[6]][6] = 1;} 
-                        else{button73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[6]][6] = 2;} 
-                        height[6]++; turno = !turno; break;
-               case 4: if (turno){button72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[6]][6] = 1;} 
-                        else{button72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[6]][6] = 2;} 
-                        height[6]++; turno = !turno; break;
-               case 5: if (turno){button71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png"))); board[height[6]][6] = 1;} 
-                        else{button71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png"))); board[height[6]][6] = 2;} 
-                        height[6]++; turno = !turno; break;
+                case 0: yay(button76, 6); break;
+                case 1: yay(button75, 6); break;
+                case 2: yay(button74, 6); break;
+                case 3: yay(button73, 6); break;
+                case 4: yay(button72, 6); break;
+                case 5: yay(button71, 6); break;
             }   
         }
      check();   
      checkwin();        
     }//GEN-LAST:event_formMouseClicked
 
+    
+    private void yay(JLabel z, int y){
+        
+        if(turno){
+                z.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/redsquare.png")));
+                board[height[y]][y] = 1;
+        }
+        else{
+                z.setIcon(new javax.swing.ImageIcon(getClass().getResource("/connectfour/yellowsquare.png")));     
+                board[height[y]][y] = 2;
+        }
+        
+        height[y]++;
+        turno = !turno;
+    }
+    
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         this.setLocationRelativeTo(null);
         for(int x = 0; x < 6; x++){
